@@ -1,0 +1,30 @@
+<form (submit) = "submitContact()"> 
+    <div class="form-group">
+      <label for="fname">Firstname</label>
+      <input type="text" class="form-control" id="fname" readonly = "true" placeholder="First name" name = "fname" [(ngModel)] ="editContact.fname">
+      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <div class="form-group">
+        <label for="lname">Lastname</label>
+        <input type="text" class="form-control" id="lname" readonly = "true"  placeholder="Last name" name = "lname" [(ngModel)] ="editContact.lname">
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" class="form-control" id="phone" readonly = "true"  placeholder="+1-xxx-xxx-xxxx" name = "phone" [(ngModel)] ="editContact.phone">
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" readonly = "true"  placeholder="example@mail.com" name = "email" [(ngModel)] ="editContact.email">
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <div class="form-group">
+        <label for="note">Note</label>
+        <textarea class="form-control" id="note" name = "note" readonly = "true" placeholder="Note" [(ngModel)] ="editContact.note"></textarea>
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+
+    <button type="submit" id = "edit" class="btn btn-primary" (click) = "contactEdit()">Edit</button>
+    <button type="submit" id = "submit" class="btn btn-primary" disabled = "disabled">Submit</button>
+</form>  

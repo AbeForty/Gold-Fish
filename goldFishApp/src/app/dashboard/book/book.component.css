@@ -1,0 +1,44 @@
+.container {
+    height: 100%;
+}
+.sidenav {
+    
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 250px; 
+    position: fixed; 
+    left: 0;
+    top: 50px;
+    background-color: #7c9ccf; 
+    transition: background-color 2s ease 0s;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fefcf7;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #227ebb;
+}
+
+/* Style page content */
+.main {
+    margin-left: 250px;
+    margin-top: 80px;
+    padding: 20px 20px;
+    /* background-color: #d5d5d3; */
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

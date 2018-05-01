@@ -1,0 +1,17 @@
+<p [ngStyle] = "{'color':'blue'}">--- dashboard/account component start here! ---</p>
+
+<div class="container">
+ 
+      <div class="sidenav">
+        <a [routerLink]="['refill']">Balance</a>
+        <a [routerLink]="['refill']">History</a>
+        <a [routerLink]="['refill']">Refill</a>
+      </div>
+    
+ 
+      <div class="main">
+          <router-outlet></router-outlet>
+        </div>
+    
+ 
+</div>

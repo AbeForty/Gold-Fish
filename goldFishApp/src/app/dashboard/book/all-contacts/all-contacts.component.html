@@ -1,0 +1,27 @@
+<!-- <p [ngStyle]="{'color':'blue'}">--- dashboard / book / all-contacts Component start here! ---</p> -->
+<div>
+  <h5>Phonebook</h5>
+  <br>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Phone No.</th>
+        <th scope="col">Status</th>
+        <th scope="col">Schedule</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contacts">
+        <th scope="row">
+          <a [routerLink]="['/dashboard/phonebook/edit/', contact._id]">{{contact.fname}} {{contact.lname}}</a>
+        </th>
+        <td>
+          <a [routerLink]="['/dashboard/phonebook/text/', contact.phone]">{{contact.phone}}</a>
+        </td>
+        <td>{{contact.status}}</td>
+        <td>{{contact.schedule.date}} - {{contact.schedule.time}} - {{contact.schedule.topic}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

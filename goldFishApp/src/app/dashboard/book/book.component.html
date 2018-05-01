@@ -1,0 +1,35 @@
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+      <div class="sidenav">
+        <a [routerLink]="['all']">All Contacts</a>
+        <a [routerLink]="['add']">Add Contacts</a>
+        <a [routerLink]="['schedule']">Schedule</a>
+      </div>
+    </div>
+    <div class="main col-8">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+ 
+    
+ 
+</div>
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-2">
+      <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a [routerLink]="['all']">All Contacts</a></li>
+          <li><a [routerLink]="['add']">Add Contacts</a></li>
+          <li><a [routerLink]="['schedule']">Schedule</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,24 @@
+<h5>Send Message</h5>
+
+<div class="container">
+    <form (submit) = "sendText()">
+        <div class="form-row">
+            <label>To:</label>
+            <input type="text" class="form-control" readonly = "true" name='phone' value="{{info.toNumber}}">
+     
+        </div>
+        <br>
+        <div class="form-row">
+          <label>Message:</label>
+          <textarea class="form-control" name = 'sms' placeholder="Your message here.." [(ngModel)] = "info.smsBody"></textarea>
+
+        </div>
+        <br>
+        <div>
+
+        <button type="submit" class="btn btn-primary">Cancel</button>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </div>
+      </form>
+</div>
+

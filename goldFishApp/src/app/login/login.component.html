@@ -1,0 +1,90 @@
+<div class="bg">
+  <div class="container login  ">
+    <div class="row align-items-center ">
+      <div class="col  ">
+
+        <div class="modal-content ">
+          <div class="modal-header">
+            <h4 class="modal-title">Member Login</h4>
+          </div>
+          <div class="modal-body">
+
+            <form (submit)='login()'>
+              <div class="form-group">
+                <input type="text" class="form-control" name="email" placeholder="Email" required="required" autocomplete="off" [(ngModel)]="logs.email">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="pwd" placeholder="Password" required="required" autocomplete="off" [(ngModel)]="logs.pwd">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Login</button>
+              </div>
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <a href="#">Forgot Password?</a>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-2 r">
+      </div>
+
+      <!-- register -->
+
+      <div class="col-6">
+        <form #registerForm="ngForm" (submit)='createUser()'>
+          <h2>Register</h2>
+          <p class="hint-text">Create your account. It's free and only takes a minute.</p>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-6">
+                <input type="text" class="form-control" name="fname" minlength="3" placeholder="First Name" required="required" [(ngModel)]="user.fname"
+                  #fname="ngModel">
+                <p *ngIf="!fname.valid && fname.touched" [ngStyle]="{'color':'red'}">* required 3 or more characters</p>
+              </div>
+
+              <div class="col-6">
+                <input type="text" class="form-control" name="lname" placeholder="Last Name" required="required" [(ngModel)]="user.lname"
+                  #lname="ngModel">
+                <p *ngIf="!lname.valid && lname.touched" [ngStyle]="{'color':'red'}">* required 3 or more characters</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Email" 
+            pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required="required" [(ngModel)]="user.email" #email="ngModel">
+            <p *ngIf="!email.valid && email.touched" [ngStyle]="{'color':'red'}">* invalid email</p>
+          </div>
+
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Password" required="required" [(ngModel)]="user.pwd"
+              #pwd="ngModel">
+            <p *ngIf="!pwd.valid && pwd.touched" [ngStyle]="{'color':'red'}">* invalid password</p>
+          </div>
+
+          <div class="form-group">
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-inline">
+              <input type="checkbox" required="required"> I accept the
+              <a href="#">Terms of Use</a> &amp;
+              <a href="#">Privacy Policy</a>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <input class="btn btn-success btn-lg btn-block" type="submit" [disabled]="registerForm.form.invalid" value="Register Now">
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
